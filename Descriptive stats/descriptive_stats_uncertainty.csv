@@ -1,0 +1,9 @@
+,projections_accuracy,effectiveness_uncertainty
+count,27.0,27.0
+mean,3.7037037037037037,4.0
+std,1.3816048309237734,1.0
+min,1.0,1.0
+25%,3.0,3.0
+50%,4.0,4.0
+75%,5.0,5.0
+max,5.0,5.0

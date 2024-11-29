@@ -1,0 +1,5 @@
+,responder_id,gender,affiliation,education_level,expertise,experience,mun_expertise  ,mun_experiences
+count,27,27,27,27,27,27,27,27
+unique,27,2,4,3,9,2,3,3
+top,er1,Male,Government,Postgraduate,Water Resource Management,5 to 10 years,Harare Urban,Harare Urban
+freq,1,16,9,14,4,15,11,11

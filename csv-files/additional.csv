@@ -1,0 +1,29 @@
+responder_id,vulnerable_mun,community_involvement,educational_programs,workshops,incentives_participation,effective_communication,What do you believe are the top three causes of water scarcity in Harare? (Select up to three),recommended_strategy
+er1,Epworth,Somewhat involved,4,4,5,4,"Population growth, Inefficient water use, Governance issues",
+er2,Epworth,Somewhat involved,5,5,5,5,"Population growth, Poor infrastructure, Governance issues","Establishment of a new water source, preferebly a dam which is adjacent to the Harare Metropolitan City area. The dam must be bigger enough to meet the current and future demand of water for the greater Harare Metropolitan area. 
+The current borehole drilling projects are simply a short-term solution to a long-term problem, hence can not be sustained over time. The water table in Harare is also contaminated, thereby posing significant public health challenges in the near future. In addition, the water table is also rapidly deteriorating. With that being said, a long term solution is urgently required. "
+er3,Epworth,Neutral,3,3,3,3,"Population growth, Climate change, Pollution of water sources",
+er4,Epworth,Somewhat involved,4,5,5,4,"Population growth, Inefficient water use, Governance issues",application of geospatial technologies
+er5,Epworth,Not involved at all,5,4,4,5,"Population growth, Climate change, Inefficient water use, Pollution of water sources, Poor infrastructure, Governance issues",Managed communal water hubs in urban areas that are managed 
+er6,Harare Urban,Somewhat involved,2,1,1,3,"Population growth, Climate change, Pollution of water sources",Build more dams and silt removal in water bodies
+er7,Harare Urban,Very involved,5,5,4,4,"Population growth, Poor infrastructure, Governance issues",
+er8,Epworth,Somewhat uninvolved,3,3,3,3,"Climate change, Poor infrastructure, Governance issues",Redefining policies related to water management
+er9,Epworth,Not involved at all,4,1,3,5,"Population growth, Poor infrastructure, Governance issues",Community involvement 
+er10,Epworth,Somewhat involved,4,4,5,4,"Population growth, Climate change, Governance issues",
+er11,Chitungwiza,Neutral,4,4,5,5,"Population growth, Climate change, Poor infrastructure",solar powered pump stations
+er12,Chitungwiza,Somewhat involved,4,3,4,3,"Population growth, Climate change, Pollution of water sources",
+er13,Epworth,Somewhat uninvolved,4,4,5,3,"Population growth, Poor infrastructure, Governance issues",Expanding grey water infrastructure and allowing private sector businesses to invest in water suppy. (Privatising water supply)
+er14,Chitungwiza,Somewhat involved,5,4,5,5,"Population growth, Inefficient water use, Poor infrastructure",Using water conservation methods at home and recycling home used water. 
+er15,Chitungwiza,Somewhat involved,5,4,5,5,"Population growth, Climate change, Pollution of water sources, Poor infrastructure",Water rationing 
+er16,Epworth,Somewhat involved,5,4,4,4,"Population growth, Inefficient water use, Poor infrastructure",Using reservoir floating cover
+er17,Epworth,Somewhat involved,3,4,3,4,"Population growth, Climate change, Governance issues",decentralized water management
+er18,Chitungwiza,Not involved at all,4,3,3,4,"Population growth, Climate change, Poor infrastructure",automatic leakage detection or community based responses and reporting.
+er19,Harare Urban,Somewhat involved,4,5,4,5,"Population growth, Climate change, Inefficient water use",
+er20,Epworth,Neutral,5,5,5,5,"Climate change, Pollution of water sources, Poor infrastructure",
+er21,Epworth,Somewhat involved,4,4,4,4,"Climate change, Inefficient water use, Poor infrastructure",
+er22,Epworth,Neutral,4,4,4,5,"Population growth, Climate change, Inefficient water use",
+er23,Epworth,Very involved,4,5,4,5,"Population growth, Climate change, Poor infrastructure",
+er24,Epworth,Not involved at all,4,5,4,4,"Population growth, Climate change, Pollution of water sources",
+er25,Epworth,Somewhat involved,4,4,5,4,"Population growth, Climate change, Inefficient water use",
+er26,Epworth,Neutral,4,5,4,4,"Population growth, Climate change, Poor infrastructure",
+er27,Chitungwiza,Somewhat involved,5,4,5,4,"Population growth, Inefficient water use, Pollution of water sources",

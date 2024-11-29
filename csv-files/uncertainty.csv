@@ -1,0 +1,790 @@
+responder_id,availability_uncertainty,projections_accuracy,effectiveness_uncertainty,uncertainty_sources
+er1,5,5,4,
+er2,5,1,4,Natural Variability of Climate cycles
+er3,1,4,3,Natural Variability of Climate cycles
+er4,4,2,3,Technological Limitations
+er5,5,2,5,Technological Limitations
+er6,5,1,3,Natural Variability of Climate cycles
+er7,2,4,3,Climate Modeling Uncertainty
+er8,4,1,3,Climate Modeling Uncertainty
+er9,2,3,3,Technological Limitations
+er10,4,3,3,Climate Modeling Uncertainty
+er11,4,4,4,Natural Variability of Climate cycles
+er12,5,5,4,Socioeconomic Factors
+er13,5,5,5,Socioeconomic Factors
+er14,4,4,1,Technological Limitations
+er15,3,2,4,Natural Variability of Climate cycles
+er16,4,3,4,Technological Limitations
+er17,5,4,4,Socioeconomic Factors
+er18,5,4,5,Socioeconomic Factors
+er19,5,4,5,Technological Limitations
+er20,5,5,4,Technological Limitations
+er21,5,5,5,Technological Limitations
+er22,5,5,5,Natural Variability of Climate cycles
+er23,5,4,4,Technological Limitations
+er24,5,5,5,Technological Limitations
+er25,5,5,5,Natural Variability of Climate cycles
+er26,5,5,5,Socioeconomic Factors
+er27,5,5,5,Climate Modeling Uncertainty
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+ResponderID,How uncertain are you about the long-term availability of water resources in response to urban growth and climate change?  ,,,What are the main sources of uncertainty in predicting the future impacts of climate change on water scarcity in Harare?  
+er128,5,,,
+er129,5,,,Natural Variability of Climate cycles
+er130,1,,,Natural Variability of Climate cycles
+er131,4,,,Technological Limitations
+er132,5,,,Technological Limitations
+er133,5,,,Natural Variability of Climate cycles
+er134,2,,,Climate Modeling Uncertainty
+er135,4,,,Climate Modeling Uncertainty
+er136,2,,,Technological Limitations
+er137,4,,,Climate Modeling Uncertainty
+er138,4,,,Natural Variability of Climate cycles
+er139,5,,,Socioeconomic Factors
+er140,5,,,Socioeconomic Factors
+er141,4,,,Technological Limitations
+er142,3,,,Natural Variability of Climate cycles
+er143,4,,,Technological Limitations
+er144,5,,,Socioeconomic Factors
+er145,5,,,Socioeconomic Factors
+er146,5,,,Technological Limitations
+er147,5,,,Technological Limitations
+er148,5,,,Technological Limitations
+er149,5,,,Natural Variability of Climate cycles
+er150,5,,,Technological Limitations
+er151,5,,,Technological Limitations
+er152,5,,,Natural Variability of Climate cycles
+er153,5,,,Socioeconomic Factors
+er154,5,,,Climate Modeling Uncertainty
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+ResponderID,How uncertain are you about the long-term availability of water resources in response to urban growth and climate change?  ,,,What are the main sources of uncertainty in predicting the future impacts of climate change on water scarcity in Harare?  
+er255,5,,,
+er256,5,,,Natural Variability of Climate cycles
+er257,1,,,Natural Variability of Climate cycles
+er258,4,,,Technological Limitations
+er259,5,,,Technological Limitations
+er260,5,,,Natural Variability of Climate cycles
+er261,2,,,Climate Modeling Uncertainty
+er262,4,,,Climate Modeling Uncertainty
+er263,2,,,Technological Limitations
+er264,4,,,Climate Modeling Uncertainty
+er265,4,,,Natural Variability of Climate cycles
+er266,5,,,Socioeconomic Factors
+er267,5,,,Socioeconomic Factors
+er268,4,,,Technological Limitations
+er269,3,,,Natural Variability of Climate cycles
+er270,4,,,Technological Limitations
+er271,5,,,Socioeconomic Factors
+er272,5,,,Socioeconomic Factors
+er273,5,,,Technological Limitations
+er274,5,,,Technological Limitations
+er275,5,,,Technological Limitations
+er276,5,,,Natural Variability of Climate cycles
+er277,5,,,Technological Limitations
+er278,5,,,Technological Limitations
+er279,5,,,Natural Variability of Climate cycles
+er280,5,,,Socioeconomic Factors
+er281,5,,,Climate Modeling Uncertainty
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+ResponderID,How uncertain are you about the long-term availability of water resources in response to urban growth and climate change?  ,,,What are the main sources of uncertainty in predicting the future impacts of climate change on water scarcity in Harare?  
+er382,5,,,
+er383,5,,,Natural Variability of Climate cycles
+er384,1,,,Natural Variability of Climate cycles
+er385,4,,,Technological Limitations
+er386,5,,,Technological Limitations
+er387,5,,,Natural Variability of Climate cycles
+er388,2,,,Climate Modeling Uncertainty
+er389,4,,,Climate Modeling Uncertainty
+er390,2,,,Technological Limitations
+er391,4,,,Climate Modeling Uncertainty
+er392,4,,,Natural Variability of Climate cycles
+er393,5,,,Socioeconomic Factors
+er394,5,,,Socioeconomic Factors
+er395,4,,,Technological Limitations
+er396,3,,,Natural Variability of Climate cycles
+er397,4,,,Technological Limitations
+er398,5,,,Socioeconomic Factors
+er399,5,,,Socioeconomic Factors
+er400,5,,,Technological Limitations
+er401,5,,,Technological Limitations
+er402,5,,,Technological Limitations
+er403,5,,,Natural Variability of Climate cycles
+er404,5,,,Technological Limitations
+er405,5,,,Technological Limitations
+er406,5,,,Natural Variability of Climate cycles
+er407,5,,,Socioeconomic Factors
+er408,5,,,Climate Modeling Uncertainty
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+ResponderID,How uncertain are you about the long-term availability of water resources in response to urban growth and climate change?  ,,,What are the main sources of uncertainty in predicting the future impacts of climate change on water scarcity in Harare?  
+er509,5,,,
+er510,5,,,Natural Variability of Climate cycles
+er511,1,,,Natural Variability of Climate cycles
+er512,4,,,Technological Limitations
+er513,5,,,Technological Limitations
+er514,5,,,Natural Variability of Climate cycles
+er515,2,,,Climate Modeling Uncertainty
+er516,4,,,Climate Modeling Uncertainty
+er517,2,,,Technological Limitations
+er518,4,,,Climate Modeling Uncertainty
+er519,4,,,Natural Variability of Climate cycles
+er520,5,,,Socioeconomic Factors
+er521,5,,,Socioeconomic Factors
+er522,4,,,Technological Limitations
+er523,3,,,Natural Variability of Climate cycles
+er524,4,,,Technological Limitations
+er525,5,,,Socioeconomic Factors
+er526,5,,,Socioeconomic Factors
+er527,5,,,Technological Limitations
+er528,5,,,Technological Limitations
+er529,5,,,Technological Limitations
+er530,5,,,Natural Variability of Climate cycles
+er531,5,,,Technological Limitations
+er532,5,,,Technological Limitations
+er533,5,,,Natural Variability of Climate cycles
+er534,5,,,Socioeconomic Factors
+er535,5,,,Climate Modeling Uncertainty
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+ResponderID,How uncertain are you about the long-term availability of water resources in response to urban growth and climate change?  ,,,What are the main sources of uncertainty in predicting the future impacts of climate change on water scarcity in Harare?  
+er636,5,,,
+er637,5,,,Natural Variability of Climate cycles
+er638,1,,,Natural Variability of Climate cycles
+er639,4,,,Technological Limitations
+er640,5,,,Technological Limitations
+er641,5,,,Natural Variability of Climate cycles
+er642,2,,,Climate Modeling Uncertainty
+er643,4,,,Climate Modeling Uncertainty
+er644,2,,,Technological Limitations
+er645,4,,,Climate Modeling Uncertainty
+er646,4,,,Natural Variability of Climate cycles
+er647,5,,,Socioeconomic Factors
+er648,5,,,Socioeconomic Factors
+er649,4,,,Technological Limitations
+er650,3,,,Natural Variability of Climate cycles
+er651,4,,,Technological Limitations
+er652,5,,,Socioeconomic Factors
+er653,5,,,Socioeconomic Factors
+er654,5,,,Technological Limitations
+er655,5,,,Technological Limitations
+er656,5,,,Technological Limitations
+er657,5,,,Natural Variability of Climate cycles
+er658,5,,,Technological Limitations
+er659,5,,,Technological Limitations
+er660,5,,,Natural Variability of Climate cycles
+er661,5,,,Socioeconomic Factors
+er662,5,,,Climate Modeling Uncertainty
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+ResponderID,How uncertain are you about the long-term availability of water resources in response to urban growth and climate change?  ,,,What are the main sources of uncertainty in predicting the future impacts of climate change on water scarcity in Harare?  
+er763,5,,,
+er764,5,,,Natural Variability of Climate cycles
+er765,1,,,Natural Variability of Climate cycles
+er766,4,,,Technological Limitations
+er767,5,,,Technological Limitations
+er768,5,,,Natural Variability of Climate cycles
+er769,2,,,Climate Modeling Uncertainty
+er770,4,,,Climate Modeling Uncertainty
+er771,2,,,Technological Limitations
+er772,4,,,Climate Modeling Uncertainty
+er773,4,,,Natural Variability of Climate cycles
+er774,5,,,Socioeconomic Factors
+er775,5,,,Socioeconomic Factors
+er776,4,,,Technological Limitations
+er777,3,,,Natural Variability of Climate cycles
+er778,4,,,Technological Limitations
+er779,5,,,Socioeconomic Factors
+er780,5,,,Socioeconomic Factors
+er781,5,,,Technological Limitations
+er782,5,,,Technological Limitations
+er783,5,,,Technological Limitations
+er784,5,,,Natural Variability of Climate cycles
+er785,5,,,Technological Limitations
+er786,5,,,Technological Limitations
+er787,5,,,Natural Variability of Climate cycles
+er788,5,,,Socioeconomic Factors
+er789,5,,,Climate Modeling Uncertainty

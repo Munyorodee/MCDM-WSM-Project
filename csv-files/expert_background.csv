@@ -1,0 +1,28 @@
+responder_id,gender,affiliation,education_level,expertise,experience,mun_expertise  ,mun_experiences
+er1,Male,NGO,Postgraduate,Water Resource Management,10+ years,Harare Urban,Chitungwiza
+er2,Male,Government,Postgraduate,Environmental Science and Conservation,10+ years,Harare Urban,Harare Urban
+er3,Male,Government,Postgraduate,Urban Planning and Development,10+ years,Harare Urban,Harare Urban
+er4,Male,Academia,Postgraduate,Climate Change and Hydrology,10+ years,Harare Urban,Harare Urban
+er5,Male,Private Sector,Postgraduate,Urban Planning and Development,5 to 10 years,Harare Urban,Harare Urban
+er6,Female,Private Sector,Undergraduate,Environmental Science and Conservation,10+ years,Harare Urban,Harare Urban
+er7,Male,Private Sector,Undergraduate,Water Resource Management,5 to 10 years,Epworth,Epworth
+er8,Male,Private Sector,Undergraduate,Civil Engineering,10+ years,Harare Urban,Harare Urban
+er9,Female,Government,Postgraduate,Data Analysis and Statistics,10+ years,Harare Urban,Harare Urban
+er10,Female,NGO,Postgraduate,Water Resource Management,5 to 10 years,Chitungwiza,Chitungwiza
+er11,Female,Government,Postgraduate,Climate Change and Hydrology,5 to 10 years,Chitungwiza,Chitungwiza
+er12,Male,Academia,Undergraduate,Public Policy and Governance,5 to 10 years,Chitungwiza,Chitungwiza
+er13,Male,Academia,Undergraduate,Other,10+ years,Epworth,Harare Urban
+er14,Male,Government,Diploma,Civil Engineering,5 to 10 years,Chitungwiza,Chitungwiza
+er15,Male,Government,Diploma,Other,5 to 10 years,Chitungwiza,Chitungwiza
+er16,Male,Government,Undergraduate,Environmental Science and Conservation,5 to 10 years,Chitungwiza,Chitungwiza
+er17,Female,NGO,Postgraduate,"Community Development, DRR and Social Work",10+ years,Epworth,Epworth
+er18,Female,Private Sector,Undergraduate,Data Analysis and Statistics,5 to 10 years,Chitungwiza,Chitungwiza
+er19,Male,Government,Postgraduate,Environmental Science and Conservation,10+ years,Chitungwiza,Chitungwiza
+er20,Female,Private Sector,Undergraduate,"Community Development, DRR and Social Work",5 to 10 years,Epworth,Epworth
+er21,Male,Academia,Undergraduate,"Community Development, DRR and Social Work",5 to 10 years,Epworth,Epworth
+er22,Female,Government,Diploma,Urban Planning and Development,5 to 10 years,Epworth,Epworth
+er23,Female,NGO,Postgraduate,Public Policy and Governance,10+ years,Epworth,Epworth
+er24,Female,Academia,Postgraduate,Climate Change and Hydrology,5 to 10 years,Epworth,Epworth
+er25,Male,Private Sector,Postgraduate,Data Analysis and Statistics,5 to 10 years,Harare Urban,Harare Urban
+er26,Male,NGO,Undergraduate,Water Resource Management,5 to 10 years,Harare Urban,Harare Urban
+er27,Female,Private Sector,Postgraduate,Climate Change and Hydrology,10+ years,Harare Urban,Harare Urban
