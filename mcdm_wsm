@@ -1,0 +1,806 @@
+
+import pandas as pd
+import os
+import pandas as pd
+
+os.chdir('Desktop/4.2/Urban Water Scarcity poject/DATA/DATA CLEANING/data')
+
+# Load each CSV file into a separate DataFrame
+additional = pd.read_csv('additional.csv')
+boreholes = pd.read_csv('boreholes.csv')
+collaboration = pd.read_csv('collaboration.csv')
+criteria_evaluation = pd.read_csv('criteria_evaluation.csv')
+demand = pd.read_csv('demand.csv')
+
+# Read and view the csv file
+demand = pd.read_csv('demand.csv')
+expert_background = pd.read_csv('expert_background.csv')
+greywater = pd.read_csv('greywater.csv')
+policy = pd.read_csv('policy.csv')
+rainwater = pd.read_csv('rainwater.csv')
+scenario = pd.read_csv('scenario.csv')
+smart_metering = pd.read_csv('smart_metering.csv')
+uncertainty = pd.read_csv('uncertainty.csv')
+
+# Calculate descriptive statistics and export to CSV
+dataframes = {
+    'boreholes': boreholes,
+    'collaboration': collaboration,
+    'criteria_evaluation': criteria_evaluation,
+    'demand': demand,
+    'greywater': greywater,
+    'policy': policy,
+    'rainwater': rainwater,
+    'smart_metering': smart_metering
+}
+
+for name, df in dataframes.items():
+    descriptive_stats = df.describe()
+    descriptive_stats.to_csv(f"descriptive_stats_{name}.csv", index=True)
+
+for name, df in dataframes.items():
+    descriptive_stats = df.describe()
+    print(f"Descriptive statistics for {name}:")
+    print(descriptive_stats)
+    print("\n" + "="*50 + "\n")
+
+    # Plot boxplots for each DataFrame with numeric columns
+
+    import seaborn as sns
+    import matplotlib.pyplot as plt
+
+    for name, df in dataframes.items():
+        numeric_df = df.select_dtypes(include='number')  # Filter to only numeric columns
+        if not numeric_df.empty:
+            plt.figure(figsize=(10, 6))
+            sns.boxplot(data=numeric_df)
+            plt.title(f'Boxplot for {name}')
+            plt.xticks(rotation=45)  # Rotate x-axis labels if necessary
+            plt.tight_layout()  # Adjust layout to prevent overlap
+            plt.show()
+        else:
+            print(f"No numeric data to plot for {name}")
+
+    ![png](output_5_0.png)
+    ![png](output_5_1.png)
+    ![png](output_5_2.png)
+    ![png](output_5_3.png)
+    ![png](output_5_4.png)
+    ![png](output_5_5.png)
+    ![png](output_5_6.png)
+    ![png](output_5_7.png)
+
+# Convert columns to numeric if they contain numeric values stored as strings
+
+import pandas as pd
+import numpy as np
+
+criteria_evaluation = criteria_evaluation.apply(pd.to_numeric, errors='coerce')
+
+# Now calculate average scores for each criterion
+criteria_averages = criteria_evaluation.mean()
+print("Average scores for each criterion:\n", criteria_averages)
+
+# Sum the averages to get the total average score
+total_average = criteria_averages.sum()
+print("\nTotal average score across all criteria:", total_average)
+
+# Calculate normalized weights (weights should add up to 1)
+criteria_weights = criteria_averages / total_average
+print("\nNormalized weights for each criterion:\n", criteria_weights)
+
+#TOTAL AVERAGE CALCULATION
+# Load dataframes of interest
+dataframes = {
+    'boreholes': boreholes,
+    'collaboration': collaboration,
+    'demand': demand,
+    'greywater': greywater,
+    'policy': policy,
+    'rainwater': rainwater,
+    'smart_metering': smart_metering,
+}
+
+# Dictionary to store the averages for each alternative
+alternatives_averages = {}
+
+# Calculate the average for each column in each DataFrame
+for name, df in dataframes.items():
+    averages = df.mean(numeric_only=True)  # Calculate mean for each column
+    alternatives_averages[name] = averages  # Store the result in the dictionary
+
+# Print the averages for each alternative
+for name, averages in alternatives_averages.items():
+    print(f"Average scores for {name}:\n{averages}\n")
+
+# NORMALIZATION OF AVERAGES
+
+import pandas as pd
+
+# Load dataframes of interest
+dataframes = {
+    'boreholes': boreholes,
+    'collaboration': collaboration,
+    'demand': demand,
+    'greywater': greywater,
+    'policy': policy,
+    'rainwater': rainwater,
+    'smart_metering': smart_metering,
+}
+
+# Dictionary to store the normalized averages for each alternative
+normalized_averages = {}
+
+# Calculate the average and normalize for each column in each DataFrame
+for name, df in dataframes.items():
+    averages = df.mean(numeric_only=True)  # Calculate mean for each column
+    total_average = averages.sum()  # Calculate the total of averages
+
+    # Normalize the averages so they sum up to 1
+    if total_average != 0:  # Avoid division by zero
+        normalized = averages / total_average
+    else:
+        normalized = averages  # If total is zero, keep as it is (all zeros)
+
+    # Store the normalized values in the dictionary
+    normalized_averages[name] = normalized
+
+# Print the normalized averages for each alternative
+for name, normalized in normalized_averages.items():
+    print(f"Normalized scores for {name}:\n{normalized}\n")
+
+from pingouin import cronbach_alpha
+
+# Load the data
+df = pd.read_csv("criteria_evaluation.csv")
+
+# Select the relevant columns for the reliability test
+columns_for_cronbach_alpha = [
+    "effectiveness",
+    "feasibility",
+    "envtal_conservation",
+    "socioeconomic",
+    "scalability",
+    "sustainability",
+    "com_engpa",
+    "policy_alignment",
+]
+
+# Filter the DataFrame to include only rows with non-null values
+df_filtered = df.dropna(subset=columns_for_cronbach_alpha)
+
+# Convert the columns to numeric
+df_filtered[columns_for_cronbach_alpha] = df_filtered[
+    columns_for_cronbach_alpha
+].apply(pd.to_numeric, errors="coerce")
+
+# Calculate Cronbach's alpha
+cronbach_alpha_result = cronbach_alpha(data=df_filtered[columns_for_cronbach_alpha])
+
+# Print Cronbach's alpha
+print(f"Cronbach's alpha: {cronbach_alpha_result[0]}")
+
+# Ranking of Alternatives based on WSM:
+
+import pandas as pd
+
+# Step 1: Define normalized weights for each criterion based on your provided data
+criteria_weights = pd.Series({
+    'effectiveness': 0.132385,
+    'feasibility': 0.129103,
+    'envtal_conservation': 0.120350,
+    'socioeconomic': 0.115974,
+    'scalability': 0.120350,
+    'sustainability': 0.128009,
+    'com_engpa': 0.128009,
+    'policy_alignment': 0.125821
+})
+
+# Step 2: Define weights for each alternative based on provided weights
+alternative_weights = {
+    'boreholes': pd.Series({
+        'effectiveness': 0.118938,
+        'feasibility': 0.127021,
+        'envtal_conservation': 0.116628,
+        'socioeconomic': 0.123557,
+        'scalability': 0.128176,
+        'sustainability': 0.122402,
+        'com_engpa': 0.135104,
+        'policy_alignment': 0.128176
+    }),
+    'collaboration': pd.Series({
+        'effectiveness': 0.127586,
+        'feasibility': 0.128736,
+        'envtal_conservation': 0.114943,
+        'socioeconomic': 0.128736,
+        'scalability': 0.125287,
+        'sustainability': 0.125287,
+        'com_engpa': 0.126437,
+        'policy_alignment': 0.122989
+    }),
+    'demand': pd.Series({
+        'effectiveness': 0.143631,
+        'feasibility': 0.146341,
+        'envtal_conservation': 0.130081,
+        'socioeconomic': 0.143631,
+        'scalability': 0.146341,
+        'sustainability': 0.143631,
+        'com_engpa': 0.146341,
+        'policy_alignment': 0
+    }),
+    'greywater': pd.Series({
+        'effectiveness': 0.129070,
+        'feasibility': 0.125581,
+        'envtal_conservation': 0.122093,
+        'socioeconomic': 0.126744,
+        'scalability': 0.123256,
+        'sustainability': 0.120930,
+        'com_engpa': 0.126744,
+        'policy_alignment': 0.125581
+    }),
+    'policy': pd.Series({
+        'effectiveness': 0.128878,
+        'feasibility': 0.128878,
+        'envtal_conservation': 0.122912,
+        'socioeconomic': 0.124105,
+        'scalability': 0.119332,
+        'sustainability': 0.126492,
+        'com_engpa': 0.124105,
+        'policy_alignment': 0.125298
+    }),
+    'rainwater': pd.Series({
+        'effectiveness': 0.130539,
+        'feasibility': 0.125749,
+        'envtal_conservation': 0.118563,
+        'socioeconomic': 0.124551,
+        'scalability': 0.124551,
+        'sustainability': 0.120958,
+        'com_engpa': 0.130539,
+        'policy_alignment': 0.124551
+    }),
+    'smart_metering': pd.Series({
+        'effectiveness': 0.129187,
+        'feasibility': 0.135167,
+        'envtal_conservation': 0.117225,
+        'socioeconomic': 0.125598,
+        'scalability': 0.120813,
+        'sustainability': 0.125598,
+        'com_engpa': 0.118421,
+        'policy_alignment': 0.127990
+    })
+}
+
+# Step 3: Calculate the weighted sum score for each alternative
+final_scores = {alt_name: round((alt_weights * criteria_weights).sum(), 6)
+                for alt_name, alt_weights in alternative_weights.items()}
+
+# Step 4: Convert the final scores to a pandas Series and rank them
+ranked_alternatives = pd.Series(final_scores).sort_values(ascending=False)
+
+# Display the ranked alternatives
+print("Final Ranking of Alternatives based on WSM:\n", ranked_alternatives)
+
+# RANKINGS BAR CHART
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Visualize the ranking using a horizontal bar graph
+plt.figure(figsize=(10, 6))
+plt.barh(ranked_alternatives.index, ranked_alternatives.values)
+plt.xlabel('Weighted Sum Score')
+plt.ylabel('Alternatives')
+plt.title('Final Ranking of Alternatives based on WSM')
+plt.gca().invert_yaxis()  # Invert y-axis to show highest rank at the top
+plt.xlim(0.124, 0.126)
+plt.show()
+![png](output_13_0.png)
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Step 1: Define the criteria weights (based on normalized values provided)
+criteria_weights = pd.Series({
+    'effectiveness': 0.132385,
+    'feasibility': 0.129103,
+    'envtal_conservation': 0.120350,
+    'socioeconomic': 0.115974,
+    'scalability': 0.120350,
+    'sustainability': 0.128009,
+    'com_engpa': 0.128009,
+    'policy_alignment': 0.125821
+})
+
+# Step 2: Define the decision matrix with alternatives (based on your provided weights)
+decision_matrix = pd.DataFrame({
+    'effectiveness': [0.118938, 0.127586, 0.143631, 0.129070, 0.128878, 0.130539, 0.129187],
+    'feasibility': [0.127021, 0.128736, 0.146341, 0.125581, 0.128878, 0.125749, 0.135167],
+    'envtal_conservation': [0.116628, 0.114943, 0.130081, 0.122093, 0.122912, 0.118563, 0.117225],
+    'socioeconomic': [0.123557, 0.128736, 0.143631, 0.126744, 0.124105, 0.124551, 0.125598],
+    'scalability': [0.128176, 0.125287, 0.146341, 0.123256, 0.119332, 0.124551, 0.120813],
+    'sustainability': [0.122402, 0.125287, 0.143631, 0.120930, 0.126492, 0.120958, 0.125598],
+    'com_engpa': [0.135104, 0.126437, 0.146341, 0.126744, 0.124105, 0.130539, 0.118421],
+    'policy_alignment': [0.128176, 0.122989, 0.000000, 0.125581, 0.125298, 0.124551, 0.127990]
+}, index=['boreholes', 'collaboration', 'demand', 'greywater', 'policy', 'rainwater', 'smart_metering'])
+
+# Step 3: Normalize the decision matrix
+normalized_matrix = decision_matrix / np.sqrt((decision_matrix**2).sum())
+
+# Step 4: Calculate the weighted normalized decision matrix
+weighted_matrix = normalized_matrix * criteria_weights
+
+# Step 5: Determine the ideal (best) and anti-ideal (worst) solutions
+ideal_solution = weighted_matrix.max()  # Best values (assuming all criteria are benefit criteria)
+anti_ideal_solution = weighted_matrix.min()  # Worst values
+
+# Step 6: Calculate the Euclidean distance from the ideal and anti-ideal solutions for each alternative
+dist_to_ideal = np.sqrt(((weighted_matrix - ideal_solution)**2).sum(axis=1))
+dist_to_anti_ideal = np.sqrt(((weighted_matrix - anti_ideal_solution)**2).sum(axis=1))
+
+# Step 7: Calculate the relative closeness to the ideal solution
+relative_closeness = dist_to_anti_ideal / (dist_to_ideal + dist_to_anti_ideal)
+
+# Step 8: Rank alternatives based on relative closeness
+ranked_alternatives_topsis = relative_closeness.sort_values(ascending=False)
+
+# Display the ranked alternatives
+print("Final Ranking of Alternatives based on TOPSIS:\n", ranked_alternatives_topsis)
+
+# Visualize the ranking using a horizontal bar graph
+plt.figure(figsize=(10, 6))
+plt.barh(ranked_alternatives_topsis.index, ranked_alternatives_topsis.values, color='skyblue')
+plt.xlabel('Relative Closeness to Ideal Solution')
+plt.ylabel('Alternatives')
+plt.title('Final Ranking of Alternatives based on TOPSIS')
+plt.gca().invert_yaxis()  # Invert y-axis to show highest rank at the top
+plt.xlim(0.2, 0.75)
+plt.show()
+![png](output_15_1.png)
+
+# WORDCLOUD 1
+
+import pandas as pd
+import matplotlib.pyplot as plt
+from wordcloud import WordCloud
+
+# Load the data from additional.csv
+df = pd.read_csv('additional.csv')
+
+# Remove entries with NaN in the 'areas_of_improvement' column
+df = df.dropna(subset=['recommended_strategy'])
+
+# Extract the text data from the causes_of_waterscarcity column
+all_responses = ' '.join(df['recommended_strategy'].astype(str).tolist())
+
+# Generate the word cloud
+wordcloud = WordCloud(width=800, height=400, background_color='white').generate(all_responses)
+
+# Display the word cloud
+plt.figure(figsize=(10, 5))
+plt.imshow(wordcloud, interpolation='bilinear')
+plt.axis('off')
+plt.show()
+![png](output_16_0.png)
+
+# wordcloud 2
+
+import pandas as pd
+import matplotlib.pyplot as plt
+from wordcloud import WordCloud
+
+# Load the data from additional.csv
+df = pd.read_csv('additional.csv')
+
+# Remove entries with NaN in the 'areas_of_improvement' column
+df = df.dropna(subset=['areas_of_improvement'])
+
+# Extract the text data from the areas_of_improvement column
+all_responses = ' '.join(df['areas_of_improvement'].astype(str).tolist())
+
+# Generate the word cloud
+wordcloud = WordCloud(width=800, height=400, background_color='white').generate(all_responses)
+
+# Display the word cloud
+plt.figure(figsize=(10, 5))
+plt.imshow(wordcloud, interpolation='bilinear')
+plt.axis('off')
+plt.show()
+```
+
+
+
+![png](output_17_0.png)
+
+# THEMATIC ANALYSIS
+
+import pandas as pd
+
+
+# Define a function to categorize each entry into themes
+def categorize_entry(entry):
+    themes = {
+        "Infrastructure Upgrades": ["infrastructure", "leaks", "repair", "upgrade", "rehabilitation"],
+        "Water Conservation and Efficiency": ["water-saving", "inefficient use", "consumption", "efficiency"],
+        "Wastewater Management": ["wastewater treatment", "purification", "effluent"],
+        "Water Governance and Policy": ["governance", "regulations", "accountability", "community participation"],
+        "Resource Management": ["wetland management", "underground water", "new dam", "water bodies"],
+        "Technological Integration": ["geospatial", "data collection"]
+    }
+
+    # Categorize the entry based on keywords
+    entry_themes = []
+    for theme, keywords in themes.items():
+        if any(keyword in entry.lower() for keyword in keywords):
+            entry_themes.append(theme)
+    return entry_themes
+
+
+# Apply the categorization function to each entry
+df['themes'] = df['areas_of_improvement'].apply(categorize_entry)
+
+# Count occurrences of each theme
+theme_counts = {}
+for themes_list in df['themes']:
+    for theme in themes_list:
+        if theme in theme_counts:
+            theme_counts[theme] += 1
+        else:
+            theme_counts[theme] = 1
+
+# Display the theme counts
+print("Theme Counts:\n", theme_counts)
+
+# Summarize entries by theme
+for theme in theme_counts.keys():
+    print(f"\nTheme: {theme}")
+    print(df[df['themes'].apply(lambda x: theme in x)]['areas_of_improvement'].tolist())
+```
+
+Theme
+Counts:
+{'Infrastructure Upgrades': 16, 'Technological Integration': 8, 'Water Conservation and Efficiency': 9,
+ 'Resource Management': 35, 'Wastewater Management': 22, 'Water Governance and Policy': 2}
+
+# THEME COUNTS VISUALIZATION
+
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from wordcloud import WordCloud
+
+# 1. Bar Chart of Theme Counts
+theme_counts = {
+    'Technological Integration': 7,
+    'Water Conservation and Efficiency': 7,
+    'Resource Management': 28,
+    'Wastewater Management': 21,
+    'Infrastructure Upgrades': 7
+}
+
+# Bar Chart of Theme Counts
+plt.figure(figsize=(10, 6))
+sns.barplot(x=list(theme_counts.keys()), y=list(theme_counts.values()), palette="viridis")
+plt.title("Theme Counts")
+plt.xlabel("Themes")
+plt.ylabel("Count")
+plt.xticks(rotation=45, ha="right")
+plt.tight_layout()
+plt.show()
+
+plt.tight_layout()
+plt.show()
+
+```
+
+C:\Users\Elsaiden\AppData\Local\Temp\ipykernel_14880\2279356359.
+py: 19: FutureWarning:
+
+Passing
+`palette`
+without
+assigning
+`hue` is deprecated and will
+be
+removed in v0
+.14
+.0.Assign
+the
+`x`
+variable
+to
+`hue` and set
+`legend = False
+`
+for the same effect.
+
+sns.barplot(x=list(theme_counts.keys()), y=list(theme_counts.values()), palette="viridis")
+
+
+
+
+![png](output_19_1.png)
+
+< Figure
+size
+640
+x480
+with 0 Axes >
+
+
+
+
+# Criteria Sensitivity Analysis
+
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# --- Data ---
+criteria_weights = pd.Series({
+    'effectiveness': 0.132385,
+    'feasibility': 0.129103,
+    'envtal_conservation': 0.120350,
+    'socioeconomic': 0.115974,
+    'scalability': 0.120350,
+    'sustainability': 0.128009,
+    'com_engpa': 0.128009,
+    'policy_alignment': 0.125821
+})
+
+alternative_weights = {
+    'boreholes': pd.Series({
+        'effectiveness': 0.118938,
+        'feasibility': 0.127021,
+        'envtal_conservation': 0.116628,
+        'socioeconomic': 0.123557,
+        'scalability': 0.128176,
+        'sustainability': 0.122402,
+        'com_engpa': 0.135104,
+        'policy_alignment': 0.128176
+    }),
+    'collaboration': pd.Series({
+        'effectiveness': 0.127586,
+        'feasibility': 0.128736,
+        'envtal_conservation': 0.114943,
+        'socioeconomic': 0.128736,
+        'scalability': 0.125287,
+        'sustainability': 0.125287,
+        'com_engpa': 0.126437,
+        'policy_alignment': 0.122989
+    }),
+    'demand': pd.Series({
+        'effectiveness': 0.126190,
+        'feasibility': 0.128571,
+        'envtal_conservation': 0.114286,
+        'socioeconomic': 0.126190,
+        'scalability': 0.128571,
+        'sustainability': 0.126190,
+        'com_engpa': 0.128571,
+        'policy_alignment': 0.121429
+    }),
+    'greywater': pd.Series({
+        'effectiveness': 0.129070,
+        'feasibility': 0.125581,
+        'envtal_conservation': 0.122093,
+        'socioeconomic': 0.126744,
+        'scalability': 0.123256,
+        'sustainability': 0.120930,
+        'com_engpa': 0.126744,
+        'policy_alignment': 0.125581
+    }),
+    'policy': pd.Series({
+        'effectiveness': 0.128878,
+        'feasibility': 0.128878,
+        'envtal_conservation': 0.122912,
+        'socioeconomic': 0.124105,
+        'scalability': 0.119332,
+        'sustainability': 0.126492,
+        'com_engpa': 0.124105,
+        'policy_alignment': 0.125298
+    }),
+    'rainwater': pd.Series({
+        'effectiveness': 0.130539,
+        'feasibility': 0.125749,
+        'envtal_conservation': 0.118563,
+        'socioeconomic': 0.124551,
+        'scalability': 0.124551,
+        'sustainability': 0.120958,
+        'com_engpa': 0.130539,
+        'policy_alignment': 0.124551
+    }),
+    'smart_metering': pd.Series({
+        'effectiveness': 0.129187,
+        'feasibility': 0.135167,
+        'envtal_conservation': 0.117225,
+        'socioeconomic': 0.125598,
+        'scalability': 0.120813,
+        'sustainability': 0.125598,
+        'com_engpa': 0.118421,
+        'policy_alignment': 0.127990
+    })
+}
+
+
+# --- Functions ---
+def calculate_wsm_scores(alt_weights, criteria_weights):
+    """Calculates WSM scores given alternative and criteria weights."""
+    final_scores = {}
+    for alt_name, alt_w in alt_weights.items():
+        total_score = (alt_w * criteria_weights).sum()
+        final_scores[alt_name] = total_score
+    return pd.Series(final_scores)
+
+
+# Calculate the original scores
+original_scores = calculate_wsm_scores(alternative_weights, criteria_weights)
+
+# Sensitivity Analysis with 10% Perturbation
+perturbation_factor = 0.1  # 10% perturbation
+sensitivity_results = {'Original': original_scores}
+
+for criterion in criteria_weights.index:
+    # Increase weight by 10%
+    increased_weights = criteria_weights.copy()
+    increased_weights[criterion] *= (1 + perturbation_factor)
+    increased_weights /= increased_weights.sum()  # Normalize to keep sum = 1
+    increased_scores = calculate_wsm_scores(alternative_weights, increased_weights)
+    sensitivity_results[f'{criterion}_+10%'] = increased_scores
+
+    # Decrease weight by 10%
+    decreased_weights = criteria_weights.copy()
+    decreased_weights[criterion] *= (1 - perturbation_factor)
+    decreased_weights /= decreased_weights.sum()  # Normalize to keep sum = 1
+    decreased_scores = calculate_wsm_scores(alternative_weights, decreased_weights)
+    sensitivity_results[f'{criterion}_-10%'] = decreased_scores
+
+# Combine results into a DataFrame for easy plotting
+sensitivity_df = pd.DataFrame(sensitivity_results)
+
+# --- Plotting ---
+# Melt the DataFrame for seaborn plotting
+melted_df = sensitivity_df.reset_index().melt(id_vars='index', var_name='Perturbation', value_name='Score')
+
+# Line Plot
+plt.figure(figsize=(14, 8))
+sns.lineplot(x='Perturbation', y='Score', hue='index', data=melted_df, marker='o')
+plt.xticks(rotation=45, ha='right')
+plt.ylabel('Weighted Sum Score')
+plt.xlabel('Criteria Perturbation')
+plt.title('Sensitivity Analysis - Impact of 10% Perturbation on WSM Scores')
+plt.legend(title='Alternatives', bbox_to_anchor=(1.05, 1), loc='upper left')
+plt.tight_layout()
+plt.show()
+
+
+# --- Recalculate Rankings ---
+def calculate_rankings(scores_df):
+    """Converts scores into rankings (lower rank = higher preference)."""
+    return scores_df.rank(ascending=False, axis=0, method='min')
+
+
+# Calculate rankings for original and perturbed scores
+rankings_df = calculate_rankings(sensitivity_df)
+
+# --- Calculate Rank Changes ---
+# Calculate rank differences from the original rankings
+rank_changes = rankings_df.sub(rankings_df['Original'], axis=0)
+
+# --- Plot the Effects of Perturbation ---
+# Prepare melted DataFrame for plotting rank shifts
+rank_melted_df = rank_changes.reset_index().melt(
+    id_vars='index', var_name='Perturbation', value_name='Rank Change'
+)
+
+# Line Plot of Rank Changes
+plt.figure(figsize=(14, 8))
+sns.lineplot(x='Perturbation', y='Rank Change', hue='index', data=rank_melted_df, marker='o')
+plt.axhline(0, color='gray', linestyle='--', linewidth=1)  # Baseline for no rank change
+plt.xticks(rotation=45, ha='right')
+plt.ylabel('Rank Change')
+plt.xlabel('Criteria Perturbation')
+plt.title('Sensitivity Analysis - Rank Changes due to Perturbation')
+plt.legend(title='Alternatives', bbox_to_anchor=(1.05, 1), loc='upper left')
+plt.tight_layout()
+plt.show()
+
+# --- Summarize Results ---
+print("=== WSM Rankings Before and After Perturbation ===")
+print(rankings_df)
+
+print("\n=== Rank Changes Due to Perturbation ===")
+print(rank_changes)
+![png](output_20_1.png)
+![png](output_20_2.png)
+![png](output_20_3.png)
+
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+
+# Function to calculate WSM scores
+def calculate_wsm_scores(alt_weights, criteria_weights):
+    """Calculates WSM scores for all alternatives given their weights and criteria."""
+    return {alt: (weights * criteria_weights).sum() for alt, weights in alt_weights.items()}
+
+
+# --- Perturbation Sensitivity Analysis ---
+perturbation_factor = 0.1  # 10% perturbation
+
+# Initialize storage for results
+sensitivity_results = {'Original': calculate_wsm_scores(alternative_weights, criteria_weights)}
+
+# Perform sensitivity analysis for each alternative and its respective criterion
+for alternative, alt_weights in alternative_weights.items():
+    for criterion in criteria_weights.index:
+        # Perturb criterion weight for the alternative
+        for direction, factor in [('+10%', 1 + perturbation_factor), ('-10%', 1 - perturbation_factor)]:
+            perturbed_alt_weights = alternative_weights.copy()
+
+            # Apply perturbation to the specific criterion for the alternative
+            perturbed_alt_weights[alternative][criterion] *= factor
+            perturbed_alt_weights[alternative] /= perturbed_alt_weights[alternative].sum()  # Normalize
+
+            # Calculate WSM scores after perturbation
+            perturbed_scores = calculate_wsm_scores(perturbed_alt_weights, criteria_weights)
+            sensitivity_results[f'{alternative}_{criterion}_{direction}'] = perturbed_scores
+
+# --- Results Summary ---
+# Combine results into a DataFrame
+sensitivity_df = pd.DataFrame(sensitivity_results)
+
+# Recalculate rankings for original and perturbed scores
+ranking_df = sensitivity_df.rank(ascending=False, axis=0)
+
+# Calculate rank changes compared to the original rankings
+rank_changes_df = ranking_df.sub(ranking_df['Original'], axis=0)
+
+# --- Plotting ---
+# Prepare data for plotting
+melted_rank_changes = rank_changes_df.reset_index().melt(
+    id_vars='index', var_name='Perturbation', value_name='Rank Change'
+)
+
+# Line Plot for Rank Changes
+plt.figure(figsize=(14, 8))
+sns.lineplot(data=melted_rank_changes, x='Perturbation', y='Rank Change', hue='index', marker='o')
+plt.axhline(0, color='gray', linestyle='--', linewidth=1)  # Baseline for no rank change
+plt.xticks(rotation=45, ha='right')
+plt.ylabel('Rank Change')
+plt.xlabel('Alternative-Criterion Perturbation')
+plt.title('Sensitivity Analysis: Rank Changes Due to Alternative and Criterion Perturbation')
+plt.legend(title='Alternatives', bbox_to_anchor=(1.05, 1), loc='upper left')
+plt.tight_layout()
+plt.show()
+
+# --- Summary Outputs ---
+print("=== WSM Rankings Before and After Sensitivity Analysis ===")
+print(ranking_df)
+
+print("\n=== Rank Changes Due to Sensitivity Analysis ===")
+print(rank_changes_df)
+![png](output_21_0.png)
+![png](output_21_1.png)
+
+# SCENARIO ANALYSIS
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.decomposition import PCA
+from sklearn.preprocessing import StandardScaler
+from sklearn.cluster import KMeans
+
+# Load data
+df = pd.read_csv('scenario.csv')
+
+# 1. Descriptive Statistics
+scenario_summary = df[['drought_implications', 'urbanization_population', 'change_changes', 'economic_political-instability']].describe()
+print("Descriptive Statistics:\n", scenario_summary)
+
+# 2. Frequency Analysis
+for column in ['drought_implications', 'urbanization_population', 'change_changes', 'economic_political-instability']:
+    print(f"\nFrequency distribution for {column}:")
+    print(df[column].value_counts())
